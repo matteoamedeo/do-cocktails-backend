@@ -14,7 +14,7 @@ router.use(bodyParser.urlencoded());
 router.get('/getAllCocktails', async (req, res) => {
 
     const result = await getAllCocktails();
-    res.header("Access-Control-Allow-Origin", "*");
+    // res.header("Access-Control-Allow-Origin", "*");
     res.status(200).send(result);
 
 })
