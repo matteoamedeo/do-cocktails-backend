@@ -9,6 +9,15 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
+/* ROUTERS */
+const clientiRouter = require('./mongo/controller'); /* MONGO */
+
+/* COCKTAILS */
+app.use('/api/cocktails', clientiRouter);
+
+app.use('/', (req, res) => {
+    res.send('index')
+});
 
 
 
