@@ -6,11 +6,6 @@ require('dotenv').config();
 
 const app = express();
 
-// const corsOptions = {
-//     origin: 'http://192.168.1.55:3000', // Replace with your app's URL
-//     allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
-// };
-
 app.use(cors());
 
 app.use(express.urlencoded({ extended: true }));
@@ -24,8 +19,6 @@ app.use('/api/cocktails', cocktailsRouter);
 app.use('/', (req, res) => {
     res.send('index')
 });
-
-
 
 
 app.listen(PORT, () => console.log(`Server on ${PORT}`));

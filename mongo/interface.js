@@ -17,6 +17,7 @@ async function getAllCocktails() {
             console.log(`No cocktails found`);
             return 'Cocktails not found';
         }
+
     } catch (e) {
         console.error(e);
     } finally {
